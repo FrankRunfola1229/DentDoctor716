@@ -7,7 +7,12 @@ body {
 	justify-content: space-between;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 900;
 	font-family: 'Montserrat';
 }
@@ -15,13 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 section h2 {
 	font-size: 2.25rem;
 	line-height: 2rem;
-}
-
-@media (min-width: 992px) {
-	section h2, h3 {
-		font-size: 2rem;
-		line-height: 2.5rem;
-	}
 }
 
 .btn-xl {
@@ -73,7 +71,8 @@ section h2 {
 	color: blue;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+#mainNav .navbar-nav li.nav-item a.nav-link:active,
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
 	color: #fff;
 }
 
@@ -106,65 +105,16 @@ section h2 {
 }
 
 #logo {
-	width: 20rem;
-	height: 10rem;
+	width: 10rem;
+	height: 4rem;
 	display: inline-block;
 	vertical-align: middle;
-	filter: brightness(80%);
+	filter: brightness(100%);
 }
-
-@media (min-width: 992px) {
-	#mainNav {
-		padding-bottom: 0.5rem;
-		-webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-		transition: padding-top 0.3s, padding-bottom 0.3s;
-	}
-	#mainNav .navbar-brand {
-		font-size: 2em;
-		-webkit-transition: font-size 0.3s;
-		transition: font-size 0.3s;
-	}
-	#mainNav .navbar-nav {
-		margin-top: 0;
-	}
-	#mainNav .navbar-nav>li.nav-item>a.nav-link.active {
-		color: #fff;
-		background: #18bc9c;
-	}
-	#mainNav .navbar-nav>li.nav-item>a.nav-link.active:active, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
-		color: #fff;
-		background: #18bc9c;
-	}
-	#mainNav.navbar-shrink {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-	}
-	#mainNav.navbar-shrink .navbar-brand {
-		font-size: 1.5em;
-	}
-}
-
-@media (max-width: 1000px) {
-	#logo {
-		width: 16rem;
-		height: 7rem;
-		display: inline-block;
-		vertical-align: middle;
-		filter: brightness(100%);
-	}
-}
-
 @media (max-width: 720px) {
 	#mainNav .navbar-toggler {
 		font-size: 100%;
 		padding: 0.6rem;
-	}
-	#logo {
-		width: 14rem;
-		height: 5rem;
-		display: inline-block;
-		vertical-align: middle;
-		filter: brightness(100%);
 	}
 }
 
@@ -180,16 +130,6 @@ section h2 {
 	}
 }
 
-@media (max-width: 500px) {
-	#logo {
-		width: 12rem;
-		height: 4rem;
-		display: inline-block;
-		vertical-align: middle;
-		filter: brightness(100%);
-	}
-}
-
 @media (max-width: 430px) {
 	.navbar-brand {
 		display: inline-block;
@@ -199,6 +139,44 @@ section h2 {
 		font-size: 0.8rem;
 		line-height: inherit;
 		white-space: nowrap;
+	}
+}
+@media (min-width: 992px) {
+	section h2,
+	h3 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	#mainNav {
+		padding-bottom: 0.5rem;
+		-webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+		transition: padding-top 0.3s, padding-bottom 0.3s;
+	}
+	#mainNav .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: font-size 0.3s;
+		transition: font-size 0.3s;
+	}
+	#mainNav .navbar-nav {
+		margin-top: 0;
+	}
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+		color: #fff;
+		background: #18bc9c;
+	}
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active:active,
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+		color: #fff;
+		background: #18bc9c;
+	}
+	#mainNav.navbar-shrink {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		font-size: 1.5em;
 	}
 }
 
@@ -220,7 +198,8 @@ section h2 {
 	border-bottom: 1px solid #e9ecef;
 }
 
-.floating-label-form-group input, .floating-label-form-group textarea {
+.floating-label-form-group input,
+.floating-label-form-group textarea {
 	font-size: 1em;
 	position: relative;
 	z-index: 1;
@@ -270,7 +249,8 @@ form .row:first-child .floating-label-form-group {
 	color: #fff;
 }
 
-h3, h2 {
+h3,
+h2 {
 	text-align: center;
 	/* color: black; */
 }
@@ -279,7 +259,9 @@ h3, h2 {
 	background-color: #1a252f;
 }
 
-a:focus, a:hover, a:active {
+a:focus,
+a:hover,
+a:active {
 	color: #128f76;
 }
 
@@ -300,7 +282,9 @@ a:focus, a:hover, a:active {
 	border-color: #18bc9c;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
 	background-color: #128f76;
 	border-color: #128f76;
 }
@@ -310,7 +294,9 @@ a:focus, a:hover, a:active {
 	border-color: #2c3e50;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
 	background-color: #1a252f;
 	border-color: #1a252f;
 }
@@ -401,7 +387,7 @@ p {
 	font-size: 3.5vw;
 }
 
-.carousel-inner>.item {
+.carousel-inner > .item {
 	position: relative;
 	display: none;
 	-webkit-transition: 0.1s ease-in-out left;
@@ -422,13 +408,14 @@ p {
 	transition: all 0.35s;
 }
 
-.icon-box:hover, .icon-box.active {
+.icon-box:hover,
+.icon-box.active {
 	/* border: 0; */
 	background: -webkit-linear-gradient(180deg, teal 0%, teal 100%);
 	/* safari5.1+,chrome10+ */
 	background: -ms-linear-gradient(180deg, teal 0%, teal 100%);
 	/* ie10+ */
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600', GradientType=1);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff5a00', endColorstr='#ff3600', GradientType=1);
 	/* ie6-9 */
 	color: #fff;
 }
@@ -441,11 +428,13 @@ p {
 	display: none;
 }
 
-.icon-box:hover figure img:nth-of-type(1), .icon-box.active figure img:nth-of-type(1) {
+.icon-box:hover figure img:nth-of-type(1),
+.icon-box.active figure img:nth-of-type(1) {
 	display: none;
 }
 
-.icon-box:hover figure img:nth-of-type(2), .icon-box.active figure img:nth-of-type(2) {
+.icon-box:hover figure img:nth-of-type(2),
+.icon-box.active figure img:nth-of-type(2) {
 	display: block;
 }
 
@@ -457,7 +446,8 @@ p {
 	color: #262626;
 }
 
-.icon-box:hover .entry-title, .icon-box.active .entry-title {
+.icon-box:hover .entry-title,
+.icon-box.active .entry-title {
 	color: #fff;
 }
 
@@ -471,7 +461,8 @@ p {
 	color: #595858;
 }
 
-.icon-box:hover .entry-content p, .icon-box.active .entry-content p {
+.icon-box:hover .entry-content p,
+.icon-box.active .entry-content p {
 	color: #fff;
 }
 
@@ -646,7 +637,8 @@ p {
 	margin: 0px auto;
 }
 
-.double-bounce1, .double-bounce2 {
+.double-bounce1,
+.double-bounce2 {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
@@ -665,7 +657,8 @@ p {
 }
 
 @-webkit-keyframes sk-bounce {
-	0%, 100% {
+	0%,
+	100% {
 		-webkit-transform: scale(0);
 	}
 	50% {
@@ -674,7 +667,8 @@ p {
 }
 
 @keyframes sk-bounce {
-	0%, 100% {
+	0%,
+	100% {
 		transform: scale(0);
 		-webkit-transform: scale(0);
 	}
@@ -682,4 +676,8 @@ p {
 		transform: scale(1);
 		-webkit-transform: scale(1);
 	}
+}
+
+.red {
+	color: red;
 }

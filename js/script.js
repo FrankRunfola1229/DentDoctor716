@@ -1,21 +1,36 @@
 (function($) {
-	'use strict'; // Start of use strict
+	"use strict"; // Start of use strict
+
+	const btn = document.querySelector("#AboutMePic");
+	const about = document.querySelector("#aboutText");
+
+	btn.addEventListener("click", function(evt) {
+		about.classList.toggle("red");
+	});
+
+	const h1 = document.querySelector("#about h3");
+	btn.addEventListener("mouseenter", function(evt) {
+		h1.style.display = "none";
+	});
+	btn.addEventListener("mouseleave", function(evt) {
+		h1.style.display = "block";
+	});
 
 	// Smooth scrolling using jQuery easing
 	$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
 		if (
-			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+			location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
 			location.hostname == this.hostname
 		) {
 			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
 			if (target.length) {
-				$('html, body').animate(
+				$("html, body").animate(
 					{
-						scrollTop: target.offset().top - 70,
+						scrollTop: target.offset().top - 70
 					},
 					1000,
-					'easeInOutExpo'
+					"easeInOutExpo"
 				);
 				return false;
 			}
@@ -26,29 +41,31 @@
 	$(document).scroll(function() {
 		var scrollDistance = $(this).scrollTop();
 		if (scrollDistance > 100) {
-			$('.scroll-to-top').fadeIn();
-		} else {
-			$('.scroll-to-top').fadeOut();
+			$(".scroll-to-top").fadeIn();
+		}
+		else {
+			$(".scroll-to-top").fadeOut();
 		}
 	});
 
 	// Closes responsive menu when a scroll trigger link is clicked
-	$('.js-scroll-trigger').click(function() {
-		$('.navbar-collapse').collapse('hide');
+	$(".js-scroll-trigger").click(function() {
+		$(".navbar-collapse").collapse("hide");
 	});
 
 	// Activate scrollspy to add active class to navbar items on scroll
-	$('body').scrollspy({
-		target: '#mainNav',
-		offset: 80,
+	$("body").scrollspy({
+		target: "#mainNav",
+		offset: 80
 	});
 
 	// Collapse Navbar
 	var navbarCollapse = function() {
-		if ($('#mainNav').offset().top > 100) {
-			$('#mainNav').addClass('navbar-shrink');
-		} else {
-			$('#mainNav').removeClass('navbar-shrink');
+		if ($("#mainNav").offset().top > 100) {
+			$("#mainNav").addClass("navbar-shrink");
+		}
+		else {
+			$("#mainNav").removeClass("navbar-shrink");
 		}
 	};
 	// Collapse now if page is not at top
@@ -57,47 +74,46 @@
 	$(window).scroll(navbarCollapse);
 
 	// Modal popup$(function () {
-	$('.portfolio-item').magnificPopup({
-		type: 'inline',
+	$(".portfolio-item").magnificPopup({
+		type: "inline",
 		preloader: false,
-		focus: '#username',
-		modal: true,
+		focus: "#username",
+		modal: true
 	});
-	$(document).on('click', '.portfolio-modal-dismiss', function(e) {
+	$(document).on("click", ".portfolio-modal-dismiss", function(e) {
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
 
 	// Floating label headings for the contact form
 	$(function() {
-		$('body')
-			.on('input propertychange', '.floating-label-form-group', function(e) {
-				$(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());
+		$("body")
+			.on("input propertychange", ".floating-label-form-group", function(e) {
+				$(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
 			})
-			.on('focus', '.floating-label-form-group', function() {
-				$(this).addClass('floating-label-form-group-with-focus');
+			.on("focus", ".floating-label-form-group", function() {
+				$(this).addClass("floating-label-form-group-with-focus");
 			})
-			.on('blur', '.floating-label-form-group', function() {
-				$(this).removeClass('floating-label-form-group-with-focus');
+			.on("blur", ".floating-label-form-group", function() {
+				$(this).removeClass("floating-label-form-group-with-focus");
 			});
 	});
-
-	/* 
-   VIDEO POP-UP
+	/* ==========================================================================
+   									VIDEO POP-UP
    ========================================================================== */
-	$('.video-popup').magnificPopup({
+	$(".video-popup").magnificPopup({
 		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
+		type: "iframe",
+		mainClass: "mfp-fade",
 		removalDelay: 160,
 		preloader: false,
-		fixedContentPos: false,
+		fixedContentPos: false
 	});
-	/* 
-     Page Loader
+	/* ==========================================================================
+     										Page Loader
      ========================================================================== */
-	$(window).on('load', function() {
-		'use strict';
-		$('#loader').fadeOut();
+	$(window).on("load", function() {
+		"use strict";
+		$("#loader").fadeOut();
 	});
 })(jQuery); // End of use strict
