@@ -1,41 +1,34 @@
 (function($) {
-	"use strict"; // Start of use strict
+    "use strict"; // Start of use strict  
+    const about = document.querySelector("#aboutText");
+    const btn = document.querySelector("#AboutMePic");
+    
+    btn.addEventListener("click", function(evt) {
+        about.classList.toggle("red");
+    });
 
-	const btn = document.querySelector("#AboutMePic");
-	const about = document.querySelector("#aboutText");
+    const h1 = document.querySelector("#about h3");
+    btn.addEventListener("mouseenter", function(evt) {
+        h1.style.display = "none";
+    });
+    
+    btn.addEventListener("mouseleave", function(evt) {
+        h1.style.display = "block";
+    });
 
-	btn.addEventListener("click", function(evt) {
-		about.classList.toggle("red");
-	});
-
-	const h1 = document.querySelector("#about h3");
-	btn.addEventListener("mouseenter", function(evt) {
-		h1.style.display = "none";
-	});
-	btn.addEventListener("mouseleave", function(evt) {
-		h1.style.display = "block";
-	});
-
-	// Smooth scrolling using jQuery easing
-	$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-		if (
-			location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
-			location.hostname == this.hostname
-		) {
-			var target = $(this.hash);
-			target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-			if (target.length) {
-				$("html, body").animate(
-					{
-						scrollTop: target.offset().top - 70
-					},
-					1000,
-					"easeInOutExpo"
-				);
-				return false;
-			}
-		}
-	});
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+        
+        if (target.length) {
+	    $("html, body").animate({scrollTop: target.offset().top - 70},1000,"easeInOutExpo");
+	    return false;
+	}
+    }
+});
 
 	// Scroll to top button appear
 	$(document).scroll(function() {
